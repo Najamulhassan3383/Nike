@@ -1,5 +1,6 @@
 import { offer } from "../assets/images";
-
+import Button from "../components/Button";
+import { arrowRight } from "../assets/icons";
 const SpecialOffer = () => {
   return (
     <div className="flex flex-col-reverse justify-between items-center lg:flex-row gap-10 max-container">
@@ -24,6 +25,10 @@ const SpecialOffer = () => {
           unique desires, surpassing the loftiest expectations. Your journey
           with us is nothing short of exceptional.
         </p>
+        <div className="mt-7 flex flex-row w-full justify-start items-center gap-6">
+          <Button label={"Shop Now"} iconURL={arrowRight} />
+          <Button label={"Learn More"} variant="outline" />
+        </div>
       </div>
     </div>
   );
