@@ -3,7 +3,7 @@ import ShoeContainer from "../components/ShoeContainer";
 
 const PopularProducts = () => {
   return (
-    <section className="flex flex-col gap-10">
+    <section id="products" className="flex flex-col gap-10">
       <p className="text-4xl font-bold font-palanquin">
         Our <span className="text-coral-red">Popular</span> Products
       </p>
