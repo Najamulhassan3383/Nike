@@ -29,7 +29,7 @@ import React from "react";
 
 const SideBarContainer = ({ data }) => {
   return (
-    <ul>
+    <ul className="mt-2">
       {data.map((item) => (
         <li key={item.label}>
           <input

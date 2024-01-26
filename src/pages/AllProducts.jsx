@@ -7,8 +7,8 @@ import ShoeContainer from "../components/ShoeContainer";
 import data from "../assets/data.js";
 const AllProducts = () => {
   return (
-    <main className="grid grid-cols-[auto_1fr] max-container">
-      <section className="padding">
+    <main className="grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-11/12 m-auto mt-4">
+      <section className="w-6/12 mt-10">
         <Sidebar />
       </section>
       <div>
