@@ -27,11 +27,19 @@ import React from "react";
 //   </label>
 // </div>
 
-const SideBarContainer = ({ data }) => {
+const SideBarContainer = ({ data, setFilter }) => {
+  const handleFilter = (e) => {
+    setFilter(e);
+  };
   return (
     <ul className="mt-2">
       {data.map((item) => (
-        <li key={item.label}>
+        <li
+          key={item.label}
+          onClick={() => {
+            handleFilter(item.label);
+          }}
+        >
           <input
             className=""
             type="radio"
