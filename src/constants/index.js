@@ -135,8 +135,7 @@ export const footerLinks = [
     links: [
       { name: "customer@nike.com", link: "mailto:customer@nike.com" },
       { name: "+92554862354", link: "tel:+92554862354" },
-      ],
-    
+    ],
   },
 ];
 
@@ -144,4 +143,35 @@ export const socialMedia = [
   { src: facebook, alt: "facebook logo" },
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },
+];
+
+export const categories = [
+  { label: "All", value: "All" },
+  { label: "Sneakers", value: "Sneakers" },
+  { label: "Flats", value: "Flats" },
+  { label: "Sandals", value: "Sandals" },
+  { label: "Heels", value: "Heels" },
+];
+
+export const colors = [
+  { label: "All", value: "All" },
+  { label: "Black", value: "Black" },
+  { label: "White", value: "White" },
+  { label: "Red", value: "Red" },
+  { label: "Blue", value: "Blue" },
+  { label: "Green", value: "Green" },
+];
+export const price = [
+  { label: "All", value: "All" },
+  { label: "$0 - $50", value: "0-50" },
+  { label: "$50 - $100", value: "50-100" },
+  { label: "$100 - $150", value: "100-150" },
+  { label: "Over $150", value: "150-10000000000" },
+];
+export const filters = [
+  { label: "All Products" },
+  { label: "Nike" },
+  { label: "Adidas" },
+  { label: "Puma" },
+  { label: "Vans" },
 ];
