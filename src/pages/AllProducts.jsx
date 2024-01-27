@@ -10,6 +10,8 @@ const AllProducts = () => {
   const [priceFilter, setPriceFilter] = useState("all");
   const [colorFilter, setColorFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
+  const [companyName, setCompanyName] = useState("All Products");
+  const [search, setSearch] = useState("");
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(1000);
 
@@ -20,7 +22,7 @@ const AllProducts = () => {
     setNum2(parseInt(parts[1].replace(/\D/g, "")));
   }, [priceFilter]);
 
-  const filteredData = data.filter((item) => {
+  let filteredData = data.filter((item) => {
     if (
       priceFilter === "all" &&
       colorFilter.toLowerCase() === "all" &&
@@ -77,7 +79,16 @@ const AllProducts = () => {
     return false;
   });
 
-  // Rest of the code...
+  if (companyName !== "All Products") {
+    filteredData = filteredData.filter(
+      (item) => item.company.toLowerCase() === companyName.toLowerCase()
+    );
+  }
+  if (search !== "") {
+    filteredData = filteredData.filter((item) =>
+      item.title.toLowerCase().includes(search.toLowerCase())
+    );
+  }
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-11/12 m-auto mt-4">
@@ -90,12 +101,12 @@ const AllProducts = () => {
       </section>
       <div>
         <div>
-          <NavBarProducts />
+          <NavBarProducts setSearch={setSearch} search={search} />
         </div>
         <section>
           <div className="flex flex-col gap-4">
             <p className="text-2xl font-palanquin font-bold">Recommended</p>
-            <Filter />
+            <Filter setCompanyName={setCompanyName} />
           </div>
           <div className="flex flex-row flex-wrap gap-8">
             {filteredData.map((item, index) => (
