@@ -103,7 +103,7 @@ const AllProducts = () => {
                 <ShoeContainer
                   imgURL={item.img}
                   name={item.title}
-                  price={item.newPrice}
+                  price={`$${item.newPrice}`}
                   variant="all product"
                 />
               </div>

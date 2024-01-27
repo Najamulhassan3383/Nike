@@ -27,7 +27,7 @@ import React from "react";
 //   </label>
 // </div>
 
-const SideBarContainer = ({ data, setFilter }) => {
+const SideBarContainer = ({ data, setFilter, name }) => {
   const handleFilter = (e) => {
     setFilter(e);
   };
@@ -40,12 +40,7 @@ const SideBarContainer = ({ data, setFilter }) => {
             handleFilter(item.label);
           }}
         >
-          <input
-            className=""
-            type="radio"
-            name="flexRadioDefault"
-            id="radioDefault01"
-          />
+          <input className="" type="radio" name={name} id="radioDefault01" />
           <label
             className="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
             htmlFor="radioDefault01"

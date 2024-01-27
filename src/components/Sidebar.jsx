@@ -9,15 +9,27 @@ function Sidebar({ setCategoryFilter, setColorFilter, setPriceFilter }) {
       </div>
       <div>
         <p className="text-xl font-montserrat font-bold">Category</p>
-        <SideBarContainer data={categories} setFilter={setCategoryFilter} />
+        <SideBarContainer
+          data={categories}
+          setFilter={setCategoryFilter}
+          name={"category"}
+        />
       </div>
       <div>
         <p className="text-xl font-montserrat font-bold">Price</p>
-        <SideBarContainer data={price} setFilter={setPriceFilter} />
+        <SideBarContainer
+          data={price}
+          setFilter={setPriceFilter}
+          name={"price"}
+        />
       </div>
       <div>
         <p className="text-xl font-montserrat font-bold">Color</p>
-        <SideBarContainer data={colors} setFilter={setColorFilter} />
+        <SideBarContainer
+          data={colors}
+          setFilter={setColorFilter}
+          name={"color"}
+        />
       </div>
     </div>
   );
