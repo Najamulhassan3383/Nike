@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import NavBarProducts from "../components/NavBarProducts";
 import Filter from "../components/Filter";
 import ShoeContainer from "../components/ShoeContainer";
 import data from "../assets/data.js";
+import { useState, useEffect } from "react";
 
 const AllProducts = () => {
   const [priceFilter, setPriceFilter] = useState("all");
@@ -16,7 +15,7 @@ const AllProducts = () => {
   const [num2, setNum2] = useState(1000);
 
   useEffect(() => {
-    if (priceFilter === "all") return;
+    if (priceFilter.toLowerCase() === "all") return;
     let parts = priceFilter.split(" - ");
     setNum1(parseInt(parts[0].replace(/\D/g, "")));
     setNum2(parseInt(parts[1].replace(/\D/g, "")));
