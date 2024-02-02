@@ -2,123 +2,53 @@ import Sidebar from "../components/Sidebar";
 import NavBarProducts from "../components/NavBarProducts";
 import Filter from "../components/Filter";
 import ShoeContainer from "../components/ShoeContainer";
-import data from "../assets/data.js";
+import rawdata from "../assets/data.js";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const AllProducts = () => {
-  const [priceFilter, setPriceFilter] = useState("all");
-  const [colorFilter, setColorFilter] = useState("all");
-  const [categoryFilter, setCategoryFilter] = useState("all");
-  const [companyName, setCompanyName] = useState("All Products");
-  const [search, setSearch] = useState("");
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(1000);
+  const [data, setData] = useState(rawdata);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    if (priceFilter.toLowerCase() === "all") return;
-    let parts = priceFilter.split(" - ");
-    setNum1(parseInt(parts[0].replace(/\D/g, "")));
-    setNum2(parseInt(parts[1].replace(/\D/g, "")));
-  }, [priceFilter]);
-
-  let filteredData = data.filter((item) => {
-    if (
-      priceFilter === "all" &&
-      colorFilter.toLowerCase() === "all" &&
-      categoryFilter.toLowerCase() === "all"
-    ) {
-      return true;
-    } else if (
-      priceFilter === "all" &&
-      colorFilter.toLowerCase() === "all" &&
-      categoryFilter.toLowerCase() === item.category
-    ) {
-      return true;
-    } else if (
-      colorFilter.toLowerCase() === "all" &&
-      categoryFilter.toLowerCase() === "all" &&
-      num1 <= Number(item.newPrice) &&
-      Number(item.newPrice) <= num2
-    ) {
-      return true;
-    } else if (
-      priceFilter === "all" &&
-      colorFilter.toLowerCase() === item.color.toLowerCase() &&
-      categoryFilter.toLowerCase() === "all"
-    ) {
-      return true;
-    } else if (
-      priceFilter === "all" &&
-      colorFilter.toLowerCase() === item.color.toLowerCase() &&
-      categoryFilter.toLowerCase() === item.category
-    ) {
-      return true;
-    } else if (
-      num1 <= Number(item.newPrice) &&
-      Number(item.newPrice) <= num2 &&
-      colorFilter.toLowerCase() === item.color.toLowerCase() &&
-      categoryFilter.toLowerCase() === "all"
-    ) {
-      return true;
-    } else if (
-      colorFilter.toLowerCase() === "all" &&
-      categoryFilter.toLowerCase() === item.category &&
-      num1 <= Number(item.newPrice) &&
-      Number(item.newPrice) <= num2
-    ) {
-      return true;
-    } else if (
-      num1 <= Number(item.newPrice) &&
-      Number(item.newPrice) <= num2 &&
-      colorFilter.toLowerCase() === item.color.toLowerCase() &&
-      categoryFilter.toLowerCase() === item.category
-    ) {
-      return true;
-    }
-    return false;
-  });
-
-  if (companyName !== "All Products") {
-    filteredData = filteredData.filter(
-      (item) => item.company.toLowerCase() === companyName.toLowerCase()
-    );
-  }
-  if (search !== "") {
-    filteredData = filteredData.filter((item) =>
-      item.title.toLowerCase().includes(search.toLowerCase())
-    );
-  }
+    setFilteredData(data);
+  }, [data]);
 
   return (
-    <main className="grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-11/12 m-auto mt-4">
-      <section className="w-6/12 mt-10">
+    <main className="grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-full px-8  mt-1">
+      <section className="w-6/12  mt-4">
         <Sidebar
-          setPriceFilter={setPriceFilter}
-          setColorFilter={setColorFilter}
-          setCategoryFilter={setCategoryFilter}
+          setFilteredData={setFilteredData}
+          data={data}
+          filteredData={filteredData}
         />
       </section>
       <div>
         <div>
-          <NavBarProducts setSearch={setSearch} search={search} />
+          <NavBarProducts />
         </div>
         <section>
           <div className="flex flex-col gap-4">
             <p className="text-2xl font-palanquin font-bold">Recommended</p>
-            <Filter setCompanyName={setCompanyName} />
+            <Filter />
           </div>
-          <div className="flex flex-row flex-wrap gap-8">
-            {filteredData.map((item, index) => (
-              <div key={index} className=" shadow-lg p-2 ">
-                <ShoeContainer
-                  imgURL={item.img}
-                  name={item.title}
-                  price={`$${item.newPrice}`}
-                  variant="all product"
-                />
-              </div>
+          <motion.div
+            layout
+            initial={{ opacity: 0, x: 20 }} // Start items off-screen
+            animate={{ opacity: 1, x: 0 }} // Animate to their final positions
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-3 gap-8"
+          >
+            {filteredData.map((item) => (
+              <ShoeContainer
+                key={item._id}
+                imgURL={item.img}
+                name={item.title}
+                price={`$${item.newPrice}`}
+                variant="all product"
+              />
             ))}
-          </div>
+          </motion.div>
         </section>
       </div>
     </main>

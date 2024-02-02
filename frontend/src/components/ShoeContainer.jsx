@@ -1,11 +1,16 @@
 import { star } from "../assets/icons";
+import { motion } from "framer-motion";
+
 const ShoeContainer = ({ imgURL, name, price, variant }) => {
   return (
-    <div className="border-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1">
+    <motion.div
+      layout
+      className="border-2 shadow-lg p-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1"
+    >
       <div
         className={`flex justify-center items-center ${
           variant ? "bg-white " : "bg-card"
-        }  bg-center bg-cover sm:w-60 sm:h-60 rounded-xl max-sm:p-2`}
+        }  bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-2`}
       >
         <img src={imgURL} width={282} height={282} className="object-contain" />
       </div>
@@ -20,7 +25,7 @@ const ShoeContainer = ({ imgURL, name, price, variant }) => {
       <p className="text-coral-red inline-block text-xl font-bold mt-3">
         {price}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

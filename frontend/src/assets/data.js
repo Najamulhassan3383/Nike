@@ -11,6 +11,7 @@ const data = [
     company: "Nike",
     color: "white",
     category: "sneakers",
+    _id: 123,
   },
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
@@ -22,6 +23,7 @@ const data = [
     company: "Nike",
     color: "red",
     category: "sneakers",
+    _id: 124,
   },
 
   {
@@ -34,6 +36,7 @@ const data = [
     company: "Nike",
     color: "green",
     category: "sneakers",
+    _id: 125,
   },
   {
     img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
@@ -45,6 +48,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "sneakers",
+    _id: 126,
   },
   {
     img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
@@ -56,6 +60,7 @@ const data = [
     company: "Vans",
     color: "green",
     category: "flats",
+    _id: 127,
   },
   {
     img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
@@ -67,6 +72,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "flats",
+    _id: 128,
   },
 
   {
@@ -79,6 +85,7 @@ const data = [
     company: "Vans",
     color: "white",
     category: "flats",
+    _id: 129,
   },
 
   {
@@ -91,6 +98,7 @@ const data = [
     company: "Nike",
     color: "green",
     category: "sneakers",
+    _id: 131,
   },
 
   {
@@ -103,6 +111,7 @@ const data = [
     company: "Adidas",
     color: "blue",
     category: "sneakers",
+    _id: 132,
   },
 
   {
@@ -115,6 +124,7 @@ const data = [
     company: "Puma",
     color: "green",
     category: "sneakers",
+    _id: 133,
   },
   {
     img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
@@ -126,6 +136,7 @@ const data = [
     company: "Puma",
     color: "red",
     category: "sneakers",
+    _id: 134,
   },
   {
     img: "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg",
@@ -137,6 +148,7 @@ const data = [
     company: "Puma",
     color: "black",
     category: "sneakers",
+    _id: 135,
   },
   {
     img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
@@ -148,6 +160,7 @@ const data = [
     company: "Puma",
     color: "white",
     category: "sneakers",
+    _id: 136,
   },
   {
     img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
@@ -159,6 +172,7 @@ const data = [
     company: "Puma",
     color: "black",
     category: "sneakers",
+    _id: 137,
   },
 
   {
@@ -171,6 +185,7 @@ const data = [
     company: "Puma",
     color: "green",
     category: "sneakers",
+    _id: 138,
   },
   {
     img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
@@ -182,6 +197,7 @@ const data = [
     company: "Vans",
     color: "red",
     category: "flats",
+    _id: 139,
   },
   {
     img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
@@ -193,6 +209,7 @@ const data = [
     company: "Vans",
     color: "white",
     category: "sandals",
+    _id: 141,
   },
   {
     img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
@@ -204,6 +221,7 @@ const data = [
     company: "Vans",
     color: "blue",
     category: "sandals",
+    _id: 142,
   },
   {
     img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
@@ -215,6 +233,7 @@ const data = [
     company: "Nike",
     color: "black",
     category: "sandals",
+    _id: 143,
   },
   {
     img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
@@ -226,6 +245,7 @@ const data = [
     company: "Vans",
     color: "black",
     category: "heels",
+    _id: 144,
   },
   {
     img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
@@ -237,6 +257,7 @@ const data = [
     company: "puma",
     color: "black",
     category: "heels",
+    _id: 145,
   },
   {
     img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
@@ -248,6 +269,7 @@ const data = [
     company: "Nike",
     color: "red",
     category: "heels",
+    _id: 146,
   },
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
@@ -259,6 +281,7 @@ const data = [
     company: "Nike",
     color: "red",
     category: "sneakers",
+    _id: 147,
   },
 
   {
@@ -271,6 +294,7 @@ const data = [
     company: "Nike",
     color: "black",
     category: "heels",
+    _id: 148,
   },
   {
     img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
@@ -282,6 +306,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "heels",
+    _id: 149,
   },
   {
     img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
@@ -293,6 +318,7 @@ const data = [
     company: "Adidas",
     color: "white",
     category: "heels",
+    _id: 150,
   },
   {
     img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
@@ -304,6 +330,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "heels",
+    _id: 151,
   },
   {
     img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
@@ -315,6 +342,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "flats",
+    _id: 152,
   },
 ];
 
