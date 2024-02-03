@@ -10,7 +10,7 @@ const ShoeContainer = ({ imgURL, name, price, variant }) => {
       <div
         className={`flex justify-center items-center ${
           variant ? "bg-white " : "bg-card"
-        }  bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-2`}
+        }  bg-center bg-cover sm:w-60 sm:h-60 rounded-xl max-sm:p-2`}
       >
         <img src={imgURL} width={282} height={282} className="object-contain" />
       </div>

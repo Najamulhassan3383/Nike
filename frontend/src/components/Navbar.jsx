@@ -1,6 +1,8 @@
 import headerLogo from "../assets/images/header-logo.svg";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
@@ -11,12 +13,12 @@ const Navbar = () => {
         <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
