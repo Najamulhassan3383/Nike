@@ -37,15 +37,12 @@ function Sidebar({ setFilteredData, data, filteredData }) {
 
   return (
     <div className=" grid grid-cols-1    lg:flex-col  gap-4 gap-y-9 w-full lg:w-[180px]">
-      <div className="w-full flex justify-start mb-2 items-center">
-        <img src={headerLogo} alt="logo" width={130} />
-      </div>
       <div>
         <p className="text-xl font-montserrat font-bold">Category</p>
         <div>
           <label
             htmlFor="selectCategory"
-            className="block textl-lg font-medium text-gray-900"
+            className="block textl-lg font-medium "
           >
             Select Category
           </label>
@@ -72,10 +69,7 @@ function Sidebar({ setFilteredData, data, filteredData }) {
       <div>
         <p className="text-xl font-montserrat font-bold">Color</p>
         <div>
-          <label
-            htmlFor="selectColor"
-            className="block textl-lg font-medium text-gray-900"
-          >
+          <label htmlFor="selectColor" className="block textl-lg font-medium ">
             Select Color
           </label>
 

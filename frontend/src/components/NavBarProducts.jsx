@@ -1,9 +1,11 @@
+import ThemeSwitcher from "./ThemeSwitcher";
+
 const NavBarProducts = ({ search, setSearch }) => {
   return (
-    <header className="bg-gray-50 mt-4 mb-4">
+    <header className=" mt-4 mb-4 flex flex-row justify-between items-center w-full">
       <div className="mx-auto max-w-screen-xl px-4  sm:px-6 lg:px-8">
         <div className=" gap-4">
-          <div className="flex items-center gap-4">
+          <div className=" gap-4">
             <div className="relative ">
               <label className="sr-only" htmlFor="search">
                 Search{" "}
@@ -42,6 +44,7 @@ const NavBarProducts = ({ search, setSearch }) => {
           </div>
         </div>
       </div>
+      <ThemeSwitcher />
     </header>
   );
 };

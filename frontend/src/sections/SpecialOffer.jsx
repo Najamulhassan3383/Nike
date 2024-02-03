@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
 const SpecialOffer = () => {
   return (
-    <div className="flex flex-col-reverse justify-between items-center lg:flex-row gap-10 max-container">
+    <div className=" flex flex-col-reverse justify-between items-center lg:flex-row gap-10 max-container">
       <div className="flex-1">
         <img
           src={offer}

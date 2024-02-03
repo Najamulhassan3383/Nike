@@ -3,7 +3,7 @@ import url from "../assets/images/shoe8.svg";
 
 const SuperQuality = () => {
   return (
-    <section id="about-us" className="grid grid-cols-1 md:grid-cols-2">
+    <section id="about-us" className=" grid grid-cols-1 md:grid-cols-2">
       <div className="pt-12">
         <h2 className="text-4xl font-bold font-palanquin mb-5">
           We Provide You <span className="text-coral-red">Super Quality</span>{" "}

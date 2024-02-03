@@ -15,8 +15,8 @@ const AllProducts = () => {
   }, [data]);
 
   return (
-    <main className="grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-full px-8  mt-1">
-      <section className="w-6/12  mt-4">
+    <main className=" dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-full px-8  mt-1">
+      <section className="w-6/12  mt-20">
         <Sidebar
           setFilteredData={setFilteredData}
           data={data}

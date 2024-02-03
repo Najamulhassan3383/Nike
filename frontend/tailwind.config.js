@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontSize: {
@@ -24,6 +25,15 @@ export default {
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)",
+
+        // Define custom colors for dark theme
+        dark: {
+          primary: "#333333",
+          "coral-red": "#FF0000",
+          "slate-gray": "#CCCCCC",
+          "pale-blue": "#222222",
+          "white-400": "rgba(255, 255, 255, 0.30)",
+        },
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",

@@ -11,12 +11,12 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <main className="relative">
+    <main className="relative dark:bg-[#000814]  dark:text-white">
       <Navbar />
-      <section className="xl:padding-1 wide:padding-r padding-b">
+      <section className="xl:padding-1 wide:padding-r padding-b ">
         <Hero />
       </section>
-      <section className="padding">
+      <section className="padding ">
         <PopularProducts />
       </section>
       <section className="padding">

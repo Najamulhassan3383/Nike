@@ -2,6 +2,7 @@ import headerLogo from "../assets/images/header-logo.svg";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   return (
@@ -21,6 +22,9 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <ThemeSwitcher />
+          </li>
         </ul>
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="hamburger" width={24} height={24} />

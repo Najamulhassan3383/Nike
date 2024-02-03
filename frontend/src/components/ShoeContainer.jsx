@@ -5,7 +5,7 @@ const ShoeContainer = ({ imgURL, name, price, variant }) => {
   return (
     <motion.div
       layout
-      className="border-2 shadow-lg p-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1"
+      className="border-2 shadow-lg dark:shadow-black p-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1"
     >
       <div
         className={`flex justify-center items-center ${
