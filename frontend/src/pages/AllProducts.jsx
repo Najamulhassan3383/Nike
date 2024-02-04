@@ -15,7 +15,7 @@ const AllProducts = () => {
   }, [data]);
 
   return (
-    <main className=" dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-full px-8  mt-1">
+    <main className=" dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] max-container w-full h-full   px-8  mt-1">
       <section className="w-6/12  mt-20">
         <Sidebar
           setFilteredData={setFilteredData}
@@ -25,19 +25,23 @@ const AllProducts = () => {
       </section>
       <div>
         <div>
-          <NavBarProducts />
+          <NavBarProducts setFilteredData={setFilteredData} data={data} />
         </div>
         <section>
           <div className="flex flex-col gap-4">
             <p className="text-2xl font-palanquin font-bold">Recommended</p>
-            <Filter />
+            <Filter
+              setFilteredData={setFilteredData}
+              data={data}
+              filteredData={filteredData}
+            />
           </div>
           <motion.div
             layout
             initial={{ opacity: 0, x: 20 }} // Start items off-screen
             animate={{ opacity: 1, x: 0 }} // Animate to their final positions
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-3 gap-8"
+            className="grid grid-cols-3 gap-8 mb-8"
           >
             {filteredData.map((item) => (
               <ShoeContainer

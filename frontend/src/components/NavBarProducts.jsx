@@ -1,6 +1,15 @@
+import { useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 
-const NavBarProducts = ({ search, setSearch }) => {
+const NavBarProducts = ({ setFilteredData, data }) => {
+  const [search, setSearch] = useState("");
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    let newdata = data.filter((item) => {
+      return item.title.includes(e.target.value);
+    });
+    setFilteredData(newdata);
+  };
   return (
     <header className=" mt-4 mb-4 flex flex-row justify-between items-center w-full">
       <div className="mx-auto max-w-screen-xl px-4  sm:px-6 lg:px-8">
@@ -12,12 +21,12 @@ const NavBarProducts = ({ search, setSearch }) => {
               </label>
 
               <input
-                className="h-10 w-full rounded-full border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
+                className="h-10 w-full rounded-full border-none dark:bg-black pe-10 ps-4 text-sm shadow-sm sm:w-56"
                 id="search"
                 type="search"
                 placeholder="Search website..."
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={handleChange}
               />
 
               <button

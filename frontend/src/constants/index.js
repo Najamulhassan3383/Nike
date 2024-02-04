@@ -168,9 +168,9 @@ export const price = [
   { label: "Over $150", value: "150-10000000000" },
 ];
 export const filters = [
-  { label: "All Products" },
-  { label: "Nike" },
-  { label: "Adidas" },
-  { label: "Puma" },
-  { label: "Vans" },
+  { label: "All Products", value: "all" },
+  { label: "Nike", value: "nike" },
+  { label: "Adidas", value: "adidas" },
+  { label: "Puma", value: "puma" },
+  { label: "Vans", value: "vans" },
 ];

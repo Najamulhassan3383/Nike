@@ -2,7 +2,7 @@ import footerLogo from "../assets/images/footer-logo.svg";
 import { footerLinks, socialMedia } from "../constants";
 const Footer = () => {
   return (
-    <section className="text-white grid  grid-cols-1 gap-x-24 gap-y-10  md:grid-cols-2 lg:grid-cols-4">
+    <section className=" grid  grid-cols-1 gap-x-24 gap-y-10  md:grid-cols-2 lg:grid-cols-4">
       <div className="flex flex-col gap-3">
         <img src={footerLogo} alt="footer-logo" width={140} height={100} />
         <p className="mb-5 mt-2 font-montserrat text-md">
