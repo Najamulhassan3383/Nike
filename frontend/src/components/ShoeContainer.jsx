@@ -1,7 +1,13 @@
 import { star } from "../assets/icons";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import Button from "./Button.jsx";
 
-const ShoeContainer = ({ imgURL, name, price, variant }) => {
+
+const ShoeContainer = ({ imgURL, name, price, variant, item }) => {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <motion.div
       layout
@@ -25,6 +31,14 @@ const ShoeContainer = ({ imgURL, name, price, variant }) => {
       <p className="text-coral-red inline-block text-xl font-bold mt-3">
         {price}
       </p>
+      <div
+        className="flex items-center justify-center w-full mt-1"
+        onClick={() => {
+          addToCart(item);
+        }}
+      >
+        <Button label={"Add To Cart"} className="w-full" />
+      </div>
     </motion.div>
   );
 };

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { FaShoppingCart } from "react-icons/fa";
+
+import Cart from "./Cart";
 
 const NavBarProducts = ({ setFilteredData, data }) => {
+  const [showCart, setShowCart] = useState(false);
   const [search, setSearch] = useState("");
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -10,11 +14,12 @@ const NavBarProducts = ({ setFilteredData, data }) => {
     });
     setFilteredData(newdata);
   };
+
   return (
     <header className=" mt-4 mb-4 flex flex-row justify-between items-center w-full">
-      <div className="mx-auto max-w-screen-xl px-4  sm:px-6 lg:px-8">
-        <div className=" gap-4">
-          <div className=" gap-4">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="gap-4">
+          <div className="gap-4">
             <div className="relative ">
               <label className="sr-only" htmlFor="search">
                 Search{" "}
@@ -53,6 +58,26 @@ const NavBarProducts = ({ setFilteredData, data }) => {
           </div>
         </div>
       </div>
+      {/* Conditional rendering of overlay and cart */}
+      {showCart && (
+        <>
+          <div className="fixed top-14 right-16  z-100 dark:bg-white dark:text-black bg-black rounded-xl">
+            <Cart />
+          </div>
+        </>
+      )}
+
+      {/* Cart button */}
+      <button
+        className="mr-4 relative group"
+        onClick={() => setShowCart(!showCart)}
+      >
+        <span className="absolute -top-3 text-coral-red -right-3 w-4 h-4 items-center text-[12px] bg-white rounded-full font-bold text-center justify-center hidden group-hover:block transition-all ease-in-out duration-1000">
+          3
+        </span>
+        <FaShoppingCart />
+      </button>
+      {/* Theme switcher */}
       <ThemeSwitcher />
     </header>
   );

@@ -1,4 +1,7 @@
+
 const SheoCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
+
+  
   const handleClick = () => {
     if (imgURL.bigShoe !== bigShoeImg) {
       changeBigShoeImage(imgURL.bigShoe);
