@@ -10,11 +10,118 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id String @id @default(uuid())
-  userName String
-  email String @unique
-  password String
-  
+// schema.prisma
 
+// Define the data model for the Products table
+model Product {
+  id                 Int        @id @default(autoincrement())
+  name               String
+  brand              String
+  description        String?
+  price              Float
+  purchase_price     Float
+  discount           Float
+  quantity_available Int
+  image_url          String?
+  categories         Category[]
+
+  // Define the relationship with Inventory table
+  inventories Inventory[]
+  OrderItem   OrderItem[]
+}
+
+// Define the data model for the Categories table
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String
+  products Product[]
+}
+
+// Define the data model for the Inventory table
+model Inventory {
+  id         Int     @id @default(autoincrement())
+  product    Product @relation(fields: [product_id], references: [id])
+  product_id Int
+  size       Size    @relation(fields: [size_id], references: [id])
+  size_id    Int
+  color      Color   @relation(fields: [color_id], references: [id])
+  color_id   Int
+  quantity   Int
+}
+
+// Define the data model for the Colors table
+model Color {
+  id          Int         @id @default(autoincrement())
+  name        String
+  inventories Inventory[]
+}
+
+// Define the data model for the Sizes table
+model Size {
+  id          Int         @id @default(autoincrement())
+  value       String
+  inventories Inventory[]
+}
+
+// Define the data model for the Orders table
+model Order {
+  id                       Int       @id @default(autoincrement())
+  customer                 Customer? @relation(fields: [customer_id], references: [id])
+  customer_id              Int?
+  order_date               DateTime
+  total_amount             Float
+  processed_by_employee    Employee? @relation("ProcessedBy", fields: [processed_by_employee_id], references: [id])
+  processed_by_employee_id Int?
+
+  // Define the relationship with Order Items table
+  order_items   OrderItem[]
+  ReturnedOrder ReturnedOrder[]
+}
+
+// Define the data model for the Order Items table
+model OrderItem {
+  id               Int     @id @default(autoincrement())
+  order            Order   @relation(fields: [order_id], references: [id])
+  order_id         Int
+  product          Product @relation(fields: [product_id], references: [id])
+  product_id       Int
+  quantity         Int
+  sale_price       Float
+  discounted_price Float
+  profit           Float
+}
+
+// Define the data model for the Returned Orders table
+model ReturnedOrder {
+  id                       Int       @id @default(autoincrement())
+  order                    Order     @relation(fields: [order_id], references: [id])
+  order_id                 Int
+  return_reason            String
+  return_date              DateTime
+  processed_by_employee    Employee? @relation("ProcessedBy", fields: [processed_by_employee_id], references: [id])
+  processed_by_employee_id Int?
+}
+
+// Define the data model for the Employees table
+model Employee {
+  id              Int             @id @default(autoincrement())
+  name            String
+  email           String
+  role            String
+  phone_number    String
+  address         String
+  password        String 
+  orders          Order[]         @relation("ProcessedBy")
+  returned_orders ReturnedOrder[] @relation("ProcessedBy")
+}
+
+// Define the data model for the Customers table
+model Customer {
+  id           Int     @id @default(autoincrement())
+  name         String
+  email        String
+  password     String
+  address      String
+  phone_number String
+  orders       Order[]
 }

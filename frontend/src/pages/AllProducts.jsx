@@ -19,7 +19,7 @@ const AllProducts = () => {
   return (
     <CartProvider>
       <ToastContainer />
-      <main className="  dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] max-container  min-h-screen   px-8  ">
+      <main className="  dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] w-full  min-h-screen   px-8  ">
         <section className="w-6/12  mt-20">
           <Sidebar
             setFilteredData={setFilteredData}

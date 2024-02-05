@@ -21,30 +21,44 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/api/users/register", async (req, res) => {
+app.post("/api/employees/register", async (req, res) => {
   const hashedPass = await hashedPassword(req.body.password);
+
   try {
-    const user = await prisma.user.findUnique({
+    const employee = await prisma.employee.findFirst({
       where: {
         email: req.body.email,
       },
     });
-    if (user) {
+
+    if (employee) {
       res.status(400).json({ message: "User already exists" });
     } else {
-      const user = await prisma.user.create({
+      //     name            String
+      // email           String
+      // role            String
+      // password
+      // phone_number    String
+      // address
+      console.log(req.body);
+      const employee = await prisma.employee.create({
         data: {
           email: req.body.email,
-          userName: req.body.userName,
+          name: req.body.name,
           password: hashedPass,
+          role: req.body.role,
+          phone_number: req.body.phone_number,
+          address: req.body.address,
         },
-        select: { id: true, email: true, userName: true },
       });
 
-      res.json({ success: true, user });
+      res.json({ success: true, employee });
     }
   } catch (error) {
-    res.status(401).json({ message: "plz provide correct email and password" });
+    res.status(401).json({
+      message: "plz provide correct email and password",
+      err: error,
+    });
   }
 });
 app.post("/api/users/login", async (req, res) => {

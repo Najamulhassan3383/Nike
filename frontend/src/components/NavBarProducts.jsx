@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { FaShoppingCart } from "react-icons/fa";
 
 import Cart from "./Cart";
+import { CartContext } from "../context/CartContext";
 
 const NavBarProducts = ({ setFilteredData, data }) => {
+  const { cartItems } = useContext(CartContext);
   const [showCart, setShowCart] = useState(false);
   const [search, setSearch] = useState("");
   const handleChange = (e) => {
@@ -61,7 +63,11 @@ const NavBarProducts = ({ setFilteredData, data }) => {
       {/* Conditional rendering of overlay and cart */}
       {showCart && (
         <>
-          <div className="fixed top-14 right-16  z-100 dark:bg-white dark:text-black bg-black rounded-xl">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-2"
+            onClick={() => setShowCart(!showCart)}
+          ></div>
+          <div className="absolute top-14 right-16  z-12 bg-black  dark:bg-[#001219] dark:text-white rounded-xl">
             <Cart />
           </div>
         </>
@@ -72,8 +78,8 @@ const NavBarProducts = ({ setFilteredData, data }) => {
         className="mr-4 relative group"
         onClick={() => setShowCart(!showCart)}
       >
-        <span className="absolute -top-3 text-coral-red -right-3 w-4 h-4 items-center text-[12px] bg-white rounded-full font-bold text-center justify-center hidden group-hover:block transition-all ease-in-out duration-1000">
-          3
+        <span className="absolute -top-3 text-coral-red -right-3 w-5 h-5  text-[12px] bg-white rounded-full font-bold text-center justify-center hidden group-hover:block transition-all ease-in-out duration-1000">
+          {cartItems.length}
         </span>
         <FaShoppingCart />
       </button>
