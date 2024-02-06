@@ -1,8 +1,6 @@
 import { useContext, useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { FaShoppingCart } from "react-icons/fa";
 
-import Cart from "./Cart";
 import { CartContext } from "../context/CartContext";
 import { headerLogo } from "@/assets/images";
 import { Link } from "react-router-dom";
@@ -155,9 +153,9 @@ const NavBarProducts = ({ setFilteredData, data }) => {
                 About
               </a>
               <div className="flex justify-center  w-6 h-6 items-center mb-4 md:mr-4 md:mb-0 md:block group">
-                <a
+                <Link
                   className="relative  transition-colors duration-300 transform  hover:text-gray-600 dark:hover:text-gray-300"
-                  href="#"
+                  to={"/cart"}
                 >
                   <svg
                     className="w-5 h-5"
@@ -176,7 +174,7 @@ const NavBarProducts = ({ setFilteredData, data }) => {
                   <span className="absolute hidden -top-2 -right-1 w-4 h-4 group-hover:flex justify-center items-center  text-xs text-white bg-blue-500 rounded-full">
                     {cartItems.length}
                   </span>
-                </a>
+                </Link>
               </div>
               <ThemeSwitcher />
             </div>

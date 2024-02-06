@@ -1,9 +1,16 @@
+import { useContext } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { CartContext } from "@/context/CartContext";
 
 const MobileMenuBar = ({ isOpen, search, handleChange }) => {
+  const { cartItems } = useContext(CartContext);
   return (
-    <div className={`${isOpen ? "flex " : "hidden"} w-full px-6 py-4  `}>
-      <div className="flex flex-col items-center gap-y-3 ">
+    <div
+      className={`${
+        isOpen ? "flex " : "hidden"
+      } w-full px-6 py-4 dark:text-white `}
+    >
+      <div className="flex flex-col items-center w-full gap-y-3 ">
         <div className="relative w-10/12 m-auto  md:w-3/5 shadow-md rounded-full">
           <label className="sr-only" htmlFor="search">
             Search{" "}
@@ -63,7 +70,7 @@ const MobileMenuBar = ({ isOpen, search, handleChange }) => {
         >
           About
         </a>
-        <div className="flex justify-center  w-6 h-6 items-center mb-4 md:mr-4 md:mb-0 md:block">
+        <div className="flex justify-center  w-6 h-6 items-center mb-4 md:mr-4 md:mb-0 md:block group">
           <a
             className="relative  transition-colors duration-300 transform  hover:text-gray-600 dark:hover:text-gray-300"
             href="#"
@@ -82,7 +89,9 @@ const MobileMenuBar = ({ isOpen, search, handleChange }) => {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+            <span className="absolute hidden -top-2 -right-1 w-4 h-4 group-hover:flex justify-center items-center  text-xs text-white bg-blue-500 rounded-full">
+              {cartItems.length}
+            </span>
           </a>
         </div>
         <ThemeSwitcher />

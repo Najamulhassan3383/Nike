@@ -14,7 +14,7 @@ const Cart = () => {
   console.log(totalPrice);
   return (
     <section>
-      <div className="mx-auto max-w-screen-sm px-4 py-8 sm:px-6 sm:py-12 lg:px-8 ">
+      <div className="mx-auto max-w-screen-sm px-4 py-8 sm:px-6 sm:py-12 lg:px-8 h-fit ">
         <div className="mx-auto max-w-3xl">
           <header className="text-center">
             <h1 className="text-xl font-bold  sm:text-3xl">Your Cart</h1>
@@ -23,7 +23,7 @@ const Cart = () => {
           <div className="mt-8">
             <ul className="space-y-2 w-full  m-auto">
               {cartItems.length === 0 ? (
-                <h1 className="text-center font-bold text-coral-red text-3xl">
+                <h1 className="text-center font-bold text-red-600 text-3xl">
                   Oops! Its not Looking Like a Wow
                   <br />
                   Its Empty, Head over to Products
