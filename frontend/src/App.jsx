@@ -13,7 +13,7 @@ import { CartProvider } from "./context/CartContext";
 function App() {
   return (
     <CartProvider>
-      <main className="relative dark:bg-[#000814]  dark:text-white">
+      <main className="relative dark:bg-[#000814]  dark:text-white w-full  min-h-screen padding-x">
         <Navbar />
         <section className="xl:padding-1 wide:padding-r padding-b ">
           <Hero />

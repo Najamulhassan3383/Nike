@@ -5,8 +5,7 @@ import ShoeContainer from "../components/ShoeContainer";
 import rawdata from "../assets/data.js";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { CartProvider } from "../context/CartContext.jsx";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const AllProducts = () => {
   const [data, setData] = useState(rawdata);
@@ -17,21 +16,19 @@ const AllProducts = () => {
   }, [data]);
 
   return (
-    <CartProvider>
+    <>
       <ToastContainer />
-      <main className="  dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] w-full  min-h-screen   px-8  ">
-        <section className="w-6/12  mt-20">
-          <Sidebar
-            setFilteredData={setFilteredData}
-            data={data}
-            filteredData={filteredData}
-          />
-        </section>
-        <div>
-          <div>
-            <NavBarProducts setFilteredData={setFilteredData} data={data} />
-          </div>
-          <section>
+      <NavBarProducts setFilteredData={setFilteredData} data={data} />
+      <main className=" relative  dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] w-full  min-h-screen   px-8  ">
+        <div className="grid grid-cols-1 md:grid-cols-[auto_1fr]  w-full  ">
+          <section className="w-full md:w-6/12  mt-4 mr-4">
+            <Sidebar
+              setFilteredData={setFilteredData}
+              data={data}
+              filteredData={filteredData}
+            />
+          </section>
+          <section className="mt-4">
             <div className="flex flex-col gap-4">
               <p className="text-2xl font-palanquin font-bold">Recommended</p>
               <Filter
@@ -45,7 +42,7 @@ const AllProducts = () => {
               initial={{ opacity: 0, x: 20 }} // Start items off-screen
               animate={{ opacity: 1, x: 0 }} // Animate to their final positions
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-3 gap-8 mb-8"
+              className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"
             >
               {filteredData.map((item) => (
                 <ShoeContainer
@@ -61,7 +58,7 @@ const AllProducts = () => {
           </section>
         </div>
       </main>
-    </CartProvider>
+    </>
   );
 };
 

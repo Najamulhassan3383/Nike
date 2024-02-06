@@ -4,14 +4,13 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Button from "./Button.jsx";
 
-
 const ShoeContainer = ({ imgURL, name, price, variant, item }) => {
   const { addToCart } = useContext(CartContext);
 
   return (
     <motion.div
       layout
-      className="border-2 shadow-lg dark:shadow-black p-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1"
+      className="border-2 w-full shadow-lg dark:shadow-black p-2 rounded-xl border-transparent cursor-pointer max-sm:flex-1"
     >
       <div
         className={`flex justify-center items-center ${
