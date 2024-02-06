@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CarouselComp from "@/components/CarouselComp";
 const AllProducts = () => {
   const [data, setData] = useState(rawdata);
   const [filteredData, setFilteredData] = useState([]);
@@ -19,6 +20,7 @@ const AllProducts = () => {
     <>
       <ToastContainer />
       <NavBarProducts setFilteredData={setFilteredData} data={data} />
+      <CarouselComp/>
       <main className=" relative  dark:bg-[#000814]  dark:text-white grid grid-cols-1 md:grid-cols-[auto_1fr] w-full  min-h-screen   px-8  ">
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr]  w-full  ">
           <section className="w-full md:w-6/12  mt-4 mr-4">
