@@ -1,0 +1,265 @@
+{
+  "count": 82228,
+  "results": [
+    {
+      "id": "81fe7efa-748b-4400-9e19-3d1fd2e0ae6d",
+      "brand": "Nike",
+      "colorway": "Luminous Green/Crimson Tint/Volt/Black",
+      "estimatedMarketValue": 211,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "https://image.goat.com/attachments/product_template_pictures/images/095/591/040/original/FQ8109_331.png.png",
+        "small": "https://image.goat.com/750/attachments/product_template_pictures/images/095/591/040/original/FQ8109_331.png.png",
+        "thumbnail": "https://image.goat.com/375/attachments/product_template_pictures/images/095/591/040/original/FQ8109_331.png.png"
+      },
+      "links": {
+        "stockX": "https://stockx.com/nike-zoomx-vaporfly-3-ekiden-pack",
+        "goat": "https://goat.com/sneakers/zoomx-vaporfly-next-3-ekiden-zoom-pack-fq8109-331",
+        "flightClub": "https://flightclub.com/zoomx-vaporfly-next-3-ekiden-zoom-pack-fq8109-331",
+        "stadiumGoods": ""
+      },
+      "name": "Nike ZoomX Vaporfly 3 Ekiden Pack",
+      "releaseDate": "2024-12-01",
+      "releaseYear": "2024",
+      "retailPrice": 270,
+      "silhouette": "ZoomX VaporFly Next% 3",
+      "sku": "FQ8109-331",
+      "story": ""
+    },
+    {
+      "id": "241db403-9db2-4fd0-b7bd-d92e7ce1d4c3",
+      "brand": "Nike",
+      "colorway": "Black/Black/Multi/Color/Picante Red/Anthracite",
+      "estimatedMarketValue": 98,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "https://image.goat.com/attachments/product_template_pictures/images/094/631/969/original/FV4137_001.png.png",
+        "small": "https://image.goat.com/750/attachments/product_template_pictures/images/094/631/969/original/FV4137_001.png.png",
+        "thumbnail": "https://image.goat.com/375/attachments/product_template_pictures/images/094/631/969/original/FV4137_001.png.png"
+      },
+      "links": {
+        "stockX": "https://stockx.com/nike-air-zoom-gt-hustle-2-gte-greater-than-ever",
+        "goat": "https://goat.com/sneakers/air-zoom-gt-hustle-2-greater-than-ever-fv4137-001",
+        "flightClub": "https://flightclub.com/air-zoom-gt-hustle-2-greater-than-ever-fv4137-001",
+        "stadiumGoods": ""
+      },
+      "name": "Nike Air Zoom GT Hustle 2 Greater Than Ever",
+      "releaseDate": "2024-11-09",
+      "releaseYear": "2024",
+      "retailPrice": 180,
+      "silhouette": "Air Zoom GT Hustle 2",
+      "sku": "FV4137-001",
+      "story": "The Nike GT Hustle 2 ‘Greater Than Ever’ delivers a performance basketball shoe that takes design cues from the running shoe space. The minimalist upper is crafted from breathable black mesh with tonal iridescent overlays and a padded mid-cut collar. Accented with a crimson topline and treated to a purple iridescent finish, a lightweight Phylon midsole features full-length Zoom Air cushioning for on-court responsiveness. Underfoot, a translucent rubber outsole provides multi-directional traction."
+    },
+    {
+      "id": "c8776721-6a43-42d7-bc80-0d7fd6332d39",
+      "brand": "Nike",
+      "colorway": "Bicoastal/Black/Metallic Silver",
+      "estimatedMarketValue": 910,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "https://image.goat.com/attachments/product_template_pictures/images/096/096/565/original/FQ3545_300.png.png",
+        "small": "https://image.goat.com/750/attachments/product_template_pictures/images/096/096/565/original/FQ3545_300.png.png",
+        "thumbnail": "https://image.goat.com/375/attachments/product_template_pictures/images/096/096/565/original/FQ3545_300.png.png"
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/zoom-kobe-4-protro-bicoastal-fq3545-300",
+        "flightClub": "https://flightclub.com/zoom-kobe-4-protro-bicoastal-fq3545-300",
+        "stadiumGoods": ""
+      },
+      "name": "Zoom Kobe 4 Protro 'Girl Dad'",
+      "releaseDate": "2024-06-01",
+      "releaseYear": "2024",
+      "retailPrice": 190,
+      "silhouette": "Zoom Kobe 4",
+      "sku": "FQ3545-300",
+      "story": "The Nike Zoom Kobe 4 Protro ‘Girl Dad’ is a nod to the bond that Kobe Bryant shared with his daughters. A muted teal suede upper built with rolled edges is contrasted with black accents on the Swoosh, collar lining and interior tongue. A chrome-plated heel counter displays Kobe Bryant’s signature on the lateral side, while the inside tongue showcases a ‘Girl Dad’ inscription. The sneaker rides on a lightweight Phylon midsole with a springy Zoom Air unit in the heel. Underfoot, a herringbone-traction rubber outsole reveals a carbon fiber shank plate for midfoot support."
+    },
+    {
+      "id": "575b788a-0f67-4413-827e-7aa5f4e8b581",
+      "brand": "Nike",
+      "colorway": "White/Metallic Gold/Black",
+      "estimatedMarketValue": 90,
+      "gender": "youth",
+      "image": {
+        "360": [],
+        "original": "",
+        "small": "",
+        "thumbnail": ""
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/kobe-8-protro-ps-white-metallic-gold-fn0267-102",
+        "flightClub": "https://flightclub.com/kobe-8-protro-ps-white-metallic-gold-fn0267-102",
+        "stadiumGoods": ""
+      },
+      "name": "Kobe 8 Protro PS 'Mambacita'",
+      "releaseDate": "2024-05-01",
+      "releaseYear": "2024",
+      "retailPrice": 90,
+      "silhouette": "Kobe 8 System",
+      "sku": "FN0267-102",
+      "story": "Made for little kids, the Nike Kobe 8 Protro PS &#39;Mambacita&#39; honors the lasting legacy built by Kobe Bryant and his daughter, Gianna &#39;Gigi&#39; Bryant. The low-top utilizes a light grey engineered mesh upper, featuring an all-over butterfly print with gold embroidered Swoosh branding. &#39;GIGI&#39; and her jersey number are displayed on the back heel of the left and right shoe, respectively. Lightweight cushioning arrives via a full-length foam midsole, painted black and supported by a white herringbone-traction rubber outsole."
+    },
+    {
+      "id": "74e7626e-63b6-4cce-9e61-60c3f09b348d",
+      "brand": "Nike",
+      "colorway": "White/Metallic Gold/Black",
+      "estimatedMarketValue": 120,
+      "gender": "youth",
+      "image": {
+        "360": [],
+        "original": "",
+        "small": "",
+        "thumbnail": ""
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/kobe-8-protro-gs-white-metallic-gold-fn0266-102",
+        "flightClub": "https://flightclub.com/kobe-8-protro-gs-white-metallic-gold-fn0266-102",
+        "stadiumGoods": ""
+      },
+      "name": "Kobe 8 Protro GS 'Mambacita'",
+      "releaseDate": "2024-05-01",
+      "releaseYear": "2024",
+      "retailPrice": 120,
+      "silhouette": "Kobe 8 System",
+      "sku": "FN0266-102",
+      "story": "Made for big kids, the Nike Kobe 8 Protro GS &#39;Mambacita&#39; honors the legacy that Gianna &#39;Gigi&#39; Bryant built with her father. An all-over butterfly print adorns the light grey engineered mesh upper, featuring a signature Swoosh in metallic gold embroidery. &#39;GIGI&#39; is stamped on the heel of the left shoe, while her jersey number is displayed on the heel of the right shoe. Lightweight cushioning is provided by a drop-in React foam midsole. Underfoot, a white herringbone-traction rubber outsole yields optimal grip."
+    },
+    {
+      "id": "aa063192-b4fd-4ad0-8b72-16fc5bca02cf",
+      "brand": "Nike",
+      "colorway": "White/Metallic Gold/Black",
+      "estimatedMarketValue": 190,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "",
+        "small": "",
+        "thumbnail": ""
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/kobe-8-protro-white-metallic-gold-fv6325-100",
+        "flightClub": "https://flightclub.com/kobe-8-protro-white-metallic-gold-fv6325-100",
+        "stadiumGoods": ""
+      },
+      "name": "Kobe 8 Protro 'Mambacita'",
+      "releaseDate": "2024-05-01",
+      "releaseYear": "2024",
+      "retailPrice": 190,
+      "silhouette": "Kobe 8 System",
+      "sku": "FV6325-100",
+      "story": "The Nike Kobe 8 Protro ‘Mambacita’ pays homage to Gigi Bryant, featuring an all-over butterfly print across an upper built with off-white Engineered Mesh. An embroidered gold Swoosh adorns the lateral side, while the back heel is marked with ‘Gigi’ on the left shoe and her jersey number on the right. Performance benefits include a drop-in React foam midsole and a carbon fiber shank plate. A herringbone-traction rubber outsole provides optimal grip."
+    },
+    {
+      "id": "67b9c2cf-ab4c-49a3-a3b8-109f98bdfff1",
+      "brand": "Nike",
+      "colorway": "Football Grey/Coconut Milk-Khaki-Flat Gold-Sail-Dragon Red",
+      "estimatedMarketValue": 750,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "https://image.goat.com/attachments/product_template_pictures/images/095/935/161/original/FN5880_001.png.png",
+        "small": "https://image.goat.com/750/attachments/product_template_pictures/images/095/935/161/original/FN5880_001.png.png",
+        "thumbnail": "https://image.goat.com/375/attachments/product_template_pictures/images/095/935/161/original/FN5880_001.png.png"
+      },
+      "links": {
+        "stockX": "https://stockx.com/nike-sb-dunk-low-premium-pastoral-print",
+        "goat": "https://goat.com/sneakers/dunk-low-premium-sb-pastoral-print-fn5880-001",
+        "flightClub": "https://flightclub.com/dunk-low-premium-sb-pastoral-print-fn5880-001",
+        "stadiumGoods": ""
+      },
+      "name": "Nike SB Dunk Low Premium Pastoral Print",
+      "releaseDate": "2024-04-22",
+      "releaseYear": "2024",
+      "retailPrice": 125,
+      "silhouette": "Dunk SB",
+      "sku": "FN5880-001",
+      "story": "The Nike Dunk Low Premium SB ‘Pastoral Print’ dons a grey canvas upper covered in bucolic graphics depicting fluffy clouds, soaring birds and leafy trees. Brown piping outlines the Swoosh, eyestay, and forefoot and heel overlay. A tan Nike SB tag adorns the stuffed tongue, while a Nike wordmark is embroidered in bronze lettering on the back tab. A solid off-white finish is applied to the rubber cupsole, featuring stitched sidewall construction and an outsole equipped with a hardwood-ready pivot circle."
+    },
+    {
+      "id": "0a1bb4aa-31a9-457b-a3dc-84a673552ce2",
+      "brand": "Nike",
+      "colorway": "Varsity Royal/White/University Red",
+      "estimatedMarketValue": 785,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "https://image.goat.com/attachments/product_template_pictures/images/096/178/135/original/FQ3545_400.png.png",
+        "small": "https://image.goat.com/750/attachments/product_template_pictures/images/096/178/135/original/FQ3545_400.png.png",
+        "thumbnail": "https://image.goat.com/375/attachments/product_template_pictures/images/096/178/135/original/FQ3545_400.png.png"
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/zoom-kobe-4-protro-philly-2024-fq3545-400",
+        "flightClub": "https://flightclub.com/zoom-kobe-4-protro-philly-2024-fq3545-400",
+        "stadiumGoods": ""
+      },
+      "name": "Zoom Kobe 4 Protro 'Philly'",
+      "releaseDate": "2024-04-13",
+      "releaseYear": "2024",
+      "retailPrice": 180,
+      "silhouette": "Zoom Kobe 4",
+      "sku": "FQ3545-400",
+      "story": "The Nike Zoom Kobe 4 Protro &#39;Philly&#39; revives the 2009 colorway that pays homage to Kobe Bryant&#39;s birth city. A vibrant royal blue finish is executed on the synthetic leather upper, featuring semi-translucent quarter panels that reveal Nike&#39;s supportive Flywire technology. Branding elements include a white Swoosh outlined in crimson trim, Kobe Bryant&#39;s personal logo atop the tongue, and the athlete&#39;s signature inscribed on the TPU heel counter. The low-top rests on a lightweight Phylon midsole with Zoom Air cushioning in the heel."
+    },
+    {
+      "id": "56d02d8b-42aa-467a-8a06-f4f55aba0e23",
+      "brand": "Nike",
+      "colorway": "Stadium Grey/Metallic Silver/Tour Yellow",
+      "estimatedMarketValue": 800,
+      "gender": "men",
+      "image": {
+        "360": [],
+        "original": "",
+        "small": "",
+        "thumbnail": ""
+      },
+      "links": {
+        "stockX": "https://stockx.com/nike-kobe-8-protro-venice-beach-2024",
+        "goat": "https://goat.com/sneakers/kobe-8-protro-venice-beach-2024-fq3549-007",
+        "flightClub": "https://flightclub.com/kobe-8-protro-venice-beach-2024-fq3549-007",
+        "stadiumGoods": ""
+      },
+      "name": "Nike Kobe 8 Protro Venice Beach (2024)",
+      "releaseDate": "2024-04-13",
+      "releaseYear": "2024",
+      "retailPrice": 180,
+      "silhouette": "Kobe 8 System",
+      "sku": "FQ3548-001",
+      "story": "The Nike Kobe 8 Protro ‘Venice Beach’ celebrates the vibrant culture of the Southern California city. Splashes of red, teal and yellow enliven a seamless upper built with grey Engineered Mesh. Additional pops of color arrive via a turquoise external heel counter and an orange textile collar lining. In terms of performance, the low-top is equipped with a drop-in React foam midsole and a carbon fiber shank plate. A semi-translucent rubber outsole features a herringbone traction pattern for superior grip."
+    },
+    {
+      "id": "598c971a-0e3d-4a56-99d7-cf70f23066b3",
+      "brand": "Nike",
+      "colorway": "Stadium Grey/Metallic Silver/Tour Yellow",
+      "estimatedMarketValue": 90,
+      "gender": "youth",
+      "image": {
+        "360": [],
+        "original": "",
+        "small": "",
+        "thumbnail": ""
+      },
+      "links": {
+        "stockX": "",
+        "goat": "https://goat.com/sneakers/kobe-8-protro-ps-venice-beach-fn0267-001",
+        "flightClub": "https://flightclub.com/kobe-8-protro-ps-venice-beach-fn0267-001",
+        "stadiumGoods": ""
+      },
+      "name": "Kobe 8 Protro PS 'Venice Beach'",
+      "releaseDate": "2024-04-13",
+      "releaseYear": "2024",
+      "retailPrice": 90,
+      "silhouette": "Kobe 8 System",
+      "sku": "FN0267-001",
+      "story": "Built for little kids, the Nike Kobe 8 Protro PS &#39;Venice Beach&#39; brings back a 2013 colorway that celebrates the Los Angeles neighborhood and its ties to basketball culture. The low-top utilizes an engineered mesh upper, featuring a neutral grey base with vibrant splashes of orange, yellow and teal. The latter hue is repeated on the external heel counter, marked with Kobe Bryant&#39;s signature, and lightweight foam midsole. A translucent rubber midsole provides durable traction underfoot."
+    }
+  ]
+}

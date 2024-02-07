@@ -15,31 +15,40 @@ datasource db {
 // Define the data model for the Products table
 model Product {
   id                 Int        @id @default(autoincrement())
-  name               String
+  name               String     
   brand              String
   description        String?
   price              Float
   purchase_price     Float
   discount           Float
   quantity_available Int
-  image_url          String?
+  
   categories         Category[]
 
   // Define the relationship with Inventory table
-  inventories Inventory[]
-  OrderItem   OrderItem[]
+  inventories  Inventory[]
+  OrderItem    OrderItem[]
+  ProductImage ProductImage[]
+}
+
+model ProductImage {
+  id         Int     @id @default(autoincrement())
+  original_url  String
+  small_url     String
+  thumbnail_url String
+  product    Product @relation(fields: [product_id], references: [id])
+  product_id Int
 }
 
 // Define the data model for the Categories table
 model Category {
   id       Int       @id @default(autoincrement())
-  name     String
+  name     String    @unique
   products Product[]
 }
 
 // Define the data model for the Inventory table
 model Inventory {
-  id         Int     @id @default(autoincrement())
   product    Product @relation(fields: [product_id], references: [id])
   product_id Int
   size       Size    @relation(fields: [size_id], references: [id])
@@ -47,19 +56,22 @@ model Inventory {
   color      Color   @relation(fields: [color_id], references: [id])
   color_id   Int
   quantity   Int
+
+  //make composite primary key
+  @@id([product_id, size_id, color_id])
 }
 
 // Define the data model for the Colors table
 model Color {
   id          Int         @id @default(autoincrement())
-  name        String
+  name        String      @unique
   inventories Inventory[]
 }
 
 // Define the data model for the Sizes table
 model Size {
   id          Int         @id @default(autoincrement())
-  value       String
+  value       String      @unique
   inventories Inventory[]
 }
 
@@ -67,7 +79,7 @@ model Size {
 model Order {
   id                       Int       @id @default(autoincrement())
   customer                 Customer? @relation(fields: [customer_id], references: [id])
-  customer_id              Int?
+  customer_id              String?
   order_date               DateTime
   total_amount             Float
   processed_by_employee    Employee? @relation("ProcessedBy", fields: [processed_by_employee_id], references: [id])
@@ -110,16 +122,16 @@ model Employee {
   role            String
   phone_number    String
   address         String
-  password        String 
+  password        String
   orders          Order[]         @relation("ProcessedBy")
   returned_orders ReturnedOrder[] @relation("ProcessedBy")
 }
 
 // Define the data model for the Customers table
 model Customer {
-  id           Int     @id @default(autoincrement())
+  id           String  @id @default(uuid())
   name         String
-  email        String
+  email        String  @unique
   password     String
   address      String
   phone_number String

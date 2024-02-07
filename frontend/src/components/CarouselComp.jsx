@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { products } from "../constants/index";
 
 export default function CarouselComp() {
   const plugin = React.useRef(Autoplay({ delay: 2000 }));
@@ -16,13 +17,13 @@ export default function CarouselComp() {
   return (
     <Carousel plugins={[plugin.current]} className="w-full max-h-80 ">
       <CarouselContent className="w-full max-h-80">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {products.map((item, index) => (
           <CarouselItem key={index} className="basis-full">
             <div className="p-1 w-full h-full">
               <Card className="h-full flex justify-center items-center">
                 <CardContent className="flex w-full aspect-square items-center justify-center p-6">
                   <img
-                    src="hero-img.png"
+                    src={item.imgURL}
                     width={300}
                     height={300}
                     className="object-cover"
