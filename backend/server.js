@@ -61,11 +61,11 @@ app.post("/api/employees/register", async (req, res) => {
     });
   }
 });
-app.post("/api/users/login", async (req, res) => {
+app.post("/api/employees/login", async (req, res) => {
   const { email, password } = req.body;
   console.log(email, password);
   //check the databas if the user exists
-  const user = await prisma.user.findFirst({
+  const user = await prisma.employee.findFirst({
     where: {
       email,
     },
